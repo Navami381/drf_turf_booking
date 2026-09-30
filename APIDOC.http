@@ -1,0 +1,62 @@
+#api call for creating admin reqister
+###
+POST http://127.0.0.1:8000/admin_register/
+Content-Type: application/json
+
+{
+    "username":"superuser",
+    "email":"superuser@gmail.com",
+    "password":"superuser"
+}
+
+
+#api call for listing turf bookings
+###
+GET http://127.0.0.1:8000/turf/
+Accept: application/json
+Authorization: Basic superuser:superuser
+
+#api call for creating turf booking
+###
+POST http://127.0.0.1:8000/turf/
+Content-Type: application/json
+Authorization: Basic superuser:superuser
+
+{
+        
+        "name": "master Turf",
+        "location": "tvm",
+        "phone_no": "9876543213",
+        "fee": 2000
+}
+
+#api call for retriveing turf booking
+###
+GET http://127.0.0.1:8000/turf/2/
+Accept: application/json
+
+#api call for updating turf booking
+###
+PUT http://127.0.0.1:8000/turf/2/
+Content-Type: application/json
+
+{
+        
+        "name": "Sky Sports Turf",
+        "location": "Ernakulam",
+        "phone_no": "9876543212",
+        "fee": 1800
+}
+
+#api call for deleting turf booking
+###
+DELETE http://127.0.0.1:8000/turf/2/
+Content-Type: application/json
+
+
+#bookings api calls=====
+#api call for listing bookings
+###
+GET http://127.0.0.1:8000/bookings/
+Accept: application/json
+

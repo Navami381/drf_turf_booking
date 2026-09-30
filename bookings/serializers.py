@@ -1,0 +1,9 @@
+from rest_framework import serializers
+
+class TurfBookingSerializer(serializers.Serializer):
+    team_name=serializers.CharField()
+    phone_no=serializers.IntegerField()
+    booking_date=serializers.DateField()
+    turf=serializers.CharField()
+    time=serializers.TimeField(read_only=True)
+    duration=serializers.DurationField()
