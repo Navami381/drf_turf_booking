@@ -1,7 +1,7 @@
 from django.db import models
 from app_turf.models import TurfBooking
 
-class TurfBooking(models.Model):
+class Booking(models.Model):
 
     team_name = models.CharField(max_length=200)
 
@@ -11,10 +11,7 @@ class TurfBooking(models.Model):
 
     booking_date = models.DateField()
 
-    time = models.TimeField(
-        editable=False,
-        null=True
-    )
+    time = models.TimeField(default="00:00:00")
 
     duration = models.DurationField()
 
