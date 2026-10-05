@@ -15,7 +15,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path,include
 from app_turf.views import TurfListCreteView,TurfRetrieveUpdateDeleteView,AdminRegisterView
 from bookings.views import BookingListCreateView,BookingRetriveUpdateDeleteView
 
@@ -30,5 +30,8 @@ urlpatterns = [
     #bookings
     path("bookings/",BookingListCreateView.as_view()),
     path("bookings/<int:pk/",BookingRetriveUpdateDeleteView.as_view()),
+
+    #application route
+    path("v2/booking/",include("booking_v2.urls"))
     
 ]

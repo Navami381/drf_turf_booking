@@ -66,11 +66,11 @@ POST http://127.0.0.1:8000/bookings/
 Content-Type: application/json
 
 {
-    "team_name": "Thunder Strikers",
-    "phone_no": "9876543210",
-    "booking_date": "2026-10-10",
+    "team_name": "DEvil fighters",
+    "phone_no": "9876543217",
+    "booking_date": "2026-10-05",
     "turf": 3,
-    "time": "00:00:00",
+    "time": "20:00:00",
     "duration": "02:00:00"
 
 }
@@ -100,3 +100,17 @@ Content-Type: application/json
 ###
 DELETE http://127.0.0.1:8000/bookings/4/
 Content-Type: application/json
+
+
+
+#====================================
+#api call for registering an user
+###
+POST http://127.0.0.1:8000/v2/booking/signup/
+Content-Type: application/json
+
+{
+    "username":"abhi",
+    "email":"abi12@gmail.com",
+    "password":"abi@123"
+}

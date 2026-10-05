@@ -1,7 +1,10 @@
 from django.db import models
+
+# Create your models here.
+from django.db import models
 from app_turf.models import TurfBooking
 
-class Booking(models.Model):
+class BookingV2(models.Model):
 
     team_name = models.CharField(max_length=200)
 
@@ -14,6 +17,8 @@ class Booking(models.Model):
     time = models.TimeField()
 
     duration = models.DurationField()
+
+    end_time=models.TimeField()
 
     created_at = models.DateTimeField(auto_now_add=True)
 
