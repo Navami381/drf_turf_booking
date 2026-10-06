@@ -17,4 +17,4 @@ class TurfBookingSerializer(serializers.ModelSerializer):
     class Meta:
         model=BookingV2
         fields="__all__"
-        read_only_fields = ["end_time", "created_at"]
+        read_only_fields = ["id","end_time", "created_at","booking_time","duration"]

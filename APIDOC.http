@@ -70,7 +70,7 @@ Content-Type: application/json
     "phone_no": "9876543217",
     "booking_date": "2026-10-05",
     "turf": 3,
-    "time": "20:00:00",
+    "booking_time": "10:00:00",
     "duration": "02:00:00"
 
 }
@@ -113,4 +113,24 @@ Content-Type: application/json
     "username":"abhi",
     "email":"abi12@gmail.com",
     "password":"abi@123"
+}
+
+#================================
+#api call for listing turf booking
+###
+GET http://127.0.0.1:8000/v2/booking/turfbooking/
+Accept: application/json
+
+
+#api call for adding turf booking
+###
+POST http://127.0.0.1:8000/v2/booking/turfbooking/
+Content-Type: application/json
+
+{
+    "team_name": "kerala blasters FC",
+    "phone_no": "9123456780",
+    "booking_date": "2026-10-22",
+    "turf": 3
+    
 }

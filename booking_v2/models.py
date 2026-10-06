@@ -14,7 +14,7 @@ class BookingV2(models.Model):
 
     booking_date = models.DateField()
 
-    time = models.TimeField()
+    booking_time = models.TimeField()
 
     duration = models.DurationField()
 

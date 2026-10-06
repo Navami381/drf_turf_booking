@@ -5,6 +5,6 @@ class TurfBookingSerializer(serializers.Serializer):
     phone_no=serializers.IntegerField()
     booking_date=serializers.DateField()
     turf=serializers.IntegerField()
-    time=serializers.TimeField()
+    time=serializers.TimeField(read_only=True)
     duration=serializers.DurationField()
     

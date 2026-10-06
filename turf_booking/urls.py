@@ -29,7 +29,7 @@ urlpatterns = [
 
     #bookings
     path("bookings/",BookingListCreateView.as_view()),
-    path("bookings/<int:pk/",BookingRetriveUpdateDeleteView.as_view()),
+    path("bookings/<int:pk>/",BookingRetriveUpdateDeleteView.as_view()),
 
     #application route
     path("v2/booking/",include("booking_v2.urls"))
